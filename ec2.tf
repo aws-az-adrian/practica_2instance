@@ -28,4 +28,5 @@ resource "aws_instance" "private_instance" {
     "Name"= "private-${local.sufix}"
     }
 }
+#dmsadmadasd
 
