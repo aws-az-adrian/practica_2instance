@@ -12,7 +12,7 @@ resource "aws_instance" "public_instance" {
   subnet_id     = aws_subnet.public_subnet.id
   key_name      = data.aws_key_pair.key.key_name
   vpc_security_group_ids = [aws_security_group.sg_public_instance.id]
-  user_data = file("scripts/user_data.sh")  #Llama al archivo user_data.sh para que se ejecute al iniciar la instancia
+  # user_data = file("scripts/user_data.sh")  #Llama al archivo user_data.sh para que se ejecute al iniciar la instancia
   tags = {
     "Name"= "public-${local.sufix}"
     }
